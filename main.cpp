@@ -1,15 +1,25 @@
 #include <iostream>
 
+void Increment_using_pointer(int* value)
+{
+    (*value)++;
+}
+
+void Increment_using_ref(int& value) 
+{
+    value++;
+}
+
+// both methods above are actually same. we are using ref instead of pointer since it's essentially a shortcut. 
+// instead of passing pointer and de-reference value at pointer and then increment it
+// we will pass value by ref so no need to carry about de-referencing or other stuff. concept of references are 
+// just something invented to make our lives easier.
+
 int main()
 {
     int var = 8;
-    int* ptr = &var; // (type)* => pointer. A pointer is a integer which hold the memory address of an value;
-                    // &(type) => get pointer of a value;
-    *ptr = 10;      // *pointer => get actual value stored in that memory address which pointer is pointing.
-                    // type of pointer is actually says nothing about pointer's type. A pointer will always be an integer.
-                    // we are using that type to tell the compiler how many bytes should a value take.
-                    // so we can re assign or modify a pointers value. For example if I didn't write int* in the example 
-                    // how can we re assign it. 
+    Increment_using_pointer(&var);
+    Increment_using_ref(var);
     std::cout << var << std::endl;
     
 }
