@@ -16,24 +16,16 @@ public:
     void LogError(std::string message)
     {
         if(m_LogLevel >= ErrorOnly)
-            std::cout << "[ERROR]: " << message << std::endl;
+            std::cout << message << std::endl;
     }
     void LogWarning(std::string message)
     {
         if(m_LogLevel >= WarnAndError)
-            std::cout << "[WARN]: " << message << std::endl;
+            std::cout << message << std::endl;
     }
     void LogInfo(std::string message)
     {
         if(m_LogLevel >= All)
-            std::cout << "[INFO]: " << message << std::endl;
+            std::cout << message << std::endl;
     }
 };
-
-int main()
-{
-   Log log;
-   log.SetLogFilter(log.All);
-   log.LogError("error");
-   log.LogInfo("hello");
-}
