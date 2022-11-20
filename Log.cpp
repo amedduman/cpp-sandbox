@@ -3,13 +3,14 @@
 class Log
 {
 public:
-    int ErrorOnly = 0;
-    int WarnAndError = 1;
-    int All = 2;
+    enum Level
+    {
+        ErrorOnly, WarnAndError, All
+    };
 private:
-    int m_LogLevel = All;
+    Level m_LogLevel = ErrorOnly;
 public:
-    void SetLogFilter(int filter)
+    void SetLogFilter(Level filter)
     {
         m_LogLevel = filter;
     }
