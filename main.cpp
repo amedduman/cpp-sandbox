@@ -4,15 +4,7 @@
 
 int main()
 {
-    Entity e(0, 0);
-
-    e.Move(3,5);
-
-    std::cout << e.X << " " << e.Y << std::endl;
-
-    Player p(1,1);
-
-    p.Move(1,1);
-
-    std::cout <<p.X << " " << p.Y << std::endl;
+    Player p("First Player", 100);
+    p.SayMyName();
+    p.ShowMyHealth();
 }

@@ -1,12 +1,14 @@
-#pragma once
+#ifndef CPP_SANDBOX_ENTITY_H
+#define CPP_SANDBOX_ENTITY_H
 
-class Entity
-{
-    public:
-        float X = 0;
-        float Y = 0;
-        
-        Entity(float x, float y);
+#include <iostream>
 
-        void Move(float xa, float ya);
+class Entity{
+public:
+    std::string name;
+    Entity(std::string myName);
+    void SayMyName();
 };
+
+
+#endif //CPP_SANDBOX_ENTITY_H

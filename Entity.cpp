@@ -1,13 +1,10 @@
 #include "Entity.h"
+#include <iostream>
 
-Entity::Entity(float x, float y)
-{
-	X = x;
-	Y = y;
+Entity::Entity(std::string myName) {
+    name = myName;
 }
 
-void Entity::Move(float xa, float ya)
-{
-	X += xa;
-	Y += ya;
+void Entity::SayMyName() {
+    std::cout << name << std::endl;
 }
