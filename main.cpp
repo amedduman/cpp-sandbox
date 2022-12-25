@@ -1,10 +1,14 @@
 #include <iostream>
-#include "Entity.h"
-#include "Player.h"
+
+void changeNum(int* num)
+{
+    *num = 5;
+}
 
 int main()
 {
-    Player p("First Player", 100);
-    p.SayMyName();
-    p.ShowMyHealth();
+    int num = 3;
+    int* numPtr = &num;
+    changeNum(numPtr);
+    std::cout << num << std::endl;
 }
