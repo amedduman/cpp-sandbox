@@ -13,12 +13,12 @@ public:
     Student();
     Student(std::string name, std::string last, int id, float avg);
 
-    std::string GetFirstName();
-    std::string GetLastName();
-    int GetId();
-    float GetAvg();
+    std::string GetFirstName() const;
+    std::string GetLastName() const;
+    int GetId() const;
+    float GetAvg() const;
 
-    void PrintInfo();
+    void PrintInfo() const;
 };
 
 

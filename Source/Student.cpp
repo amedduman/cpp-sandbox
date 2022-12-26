@@ -9,27 +9,27 @@ Student::Student(std::string name, std::string last, int id, float avg)
     ,m_id(id)
     ,m_avg(avg) {}
 
-std::string Student::GetFirstName()
+std::string Student::GetFirstName() const
 {
     return m_firstName;
 }
 
-std::string Student::GetLastName()
+std::string Student::GetLastName() const
 {
     return m_lastName;
 }
 
-int Student::GetId()
+int Student::GetId() const
 {
     return m_id;
 }
 
-float Student::GetAvg()
+float Student::GetAvg() const
 {
     return m_avg;
 }
 
-void Student::PrintInfo()
+void Student::PrintInfo() const
 {
     std::cout << "First Name: " << m_firstName  << std::endl;
     std::cout << "Last Name: " << m_lastName << std::endl;
