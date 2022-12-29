@@ -7,18 +7,12 @@ void pp(int& i)
 
 int main()
 {
-    int arr[10] = {};
-    int* harr = new int[10];
+    int a = 1;
+    int b = 2;
 
-    for(auto& i:arr)
-    {
-        pp(i);
-    }
+    // we modify a without accessing it directly. This is an example why pointers are unsafe.
+    *(&b + 1) = 5;
 
-    std::cout << "-----------------------" << std::endl;
-
-    for(auto i = 0; i < 10; i++)
-    {
-        pp(harr[i]);
-    }
+    pp(a);
+    pp(b);
 }
